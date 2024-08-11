@@ -10,6 +10,8 @@ public class SignupRequestDto {
     @NotBlank(message = "Last Name is required")
     private String lastName;
 
+    @NotBlank(message = "Phone number is required")
+    private String phone;
 
     @Size(max = 100)
     @NotBlank(message = "Email Name is required")
