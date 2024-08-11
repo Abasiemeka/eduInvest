@@ -1,11 +1,15 @@
 package com.martins.eduinvest.model.baseentities;
+
+import lombok.experimental.SuperBuilder;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @MappedSuperclass
-@Data
+@SuperBuilder
+@ToString
+@Getter
+@Setter
 public abstract class Person {
 
     @Id
@@ -16,7 +20,7 @@ public abstract class Person {
     private String email;
     private String phone;
     private String password; // Hash this in practice
-    private Date dob;
+    private LocalDateTime dob;
     private String address;
 
     // Additional common properties...
